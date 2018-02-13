@@ -1,21 +1,22 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>biz.televida</groupId>
-  <artifactId>testHelloWorldAlain</artifactId>
-  <version>0.0.1-Test</version>
+  <groupId>com.devops</groupId>
+  <artifactId>Demo</artifactId>
   <packaging>war</packaging>
-  <url>http://www.televida.biz</url>
-  <organization>
-      <name>Televida</name>
-      <url>http://www.televida.biz</url>
-  </organization>
-  <properties>
-      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>  
-
-
-    <plugins>
-	<plugin>
+  <version>1.0-SNAPSHOT</version>
+  <name>Demo Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+<plugins>
+<plugin>
 	    <artifactId>maven-war-plugin</artifactId>
 	    <version>2.4</version>
 	    <configuration>
@@ -23,50 +24,19 @@
 	    </configuration>
 	</plugin>
     </plugins>
-
   <build>
-    <sourceDirectory>src/main/java</sourceDirectory>
-    <testSourceDirectory>src/test/java</testSourceDirectory>
-    <resources>
-        <resource>
-            <directory>${project.basedir}/src/main/resources</directory>
-        </resource>
-    </resources>
-    <testResources>
-        <testResource>
-            <directory>${project.basedir}/src/test/resources</directory>
-        </testResource>
-    </testResources>    
-
-    <extensions>
-        <!-- begin - needed for deploying to repository using webdav -->
-        <extension>
-            <groupId>org.apache.maven.wagon</groupId>
-            <artifactId>wagon-webdav-jackrabbit</artifactId>
-            <version>2.10</version>
-        </extension>
-        <!-- end - needed for deploying to repository using webdav -->
-    </extensions>    
+    <finalName>Demo</finalName>
   </build>
   <distributionManagement>
-      <repository>
-          <id>archiva.internal</id>
-          <name>Internal Release Repository</name>
-          <url>dav:http://192.168.2.110:9009/repository/internal</url>
-      </repository>
-      <snapshotRepository>
-          <id>archiva.snapshots</id>
-          <name>Internal Snapshot Repository</name>
-          <url>dav:http://192.168.2.110:18081/repository/snapshots
-dav:http://192.168.2.110:9009/repository/snapshots</url>
-      </snapshotRepository>
-  </distributionManagement>
-  <dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
-  </dependencies>  
+        <repository>
+            <id>internal</id>
+            <name>Internal Release Repository</name>
+            <url>http://192.168.2.110:18081/repository/internal</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Internal Snapshot Repository</name>
+            <url>http://192.168.2.110:18081/repository/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
