@@ -15,6 +15,15 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <plugins>
+	<plugin>
+	    <artifactId>maven-war-plugin</artifactId>
+	    <version>2.4</version>
+	    <configuration>
+		<failOnMissingWebXml>false</failOnMissingWebXml>
+	    </configuration>
+	</plugin>
+</plugins>
   <build>
     <finalName>DemoAlain</finalName>
   </build>
