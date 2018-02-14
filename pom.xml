@@ -17,7 +17,6 @@
    </scm>      
   <build>
     <finalName>DemoAlain</finalName>
-    <sourceDirectory>Test-war/src</sourceDirectory>
     <sourceDirectory>Test-war/src/java</sourceDirectory>
     <plugins>
 	<plugin>            
