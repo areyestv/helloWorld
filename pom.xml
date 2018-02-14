@@ -18,22 +18,7 @@
   <build>
     <finalName>DemoAlain</finalName>
   </build>
-  <distributionManagement>
-        <repository>
-            <id>internal</id>
-            <name>Internal Release Repository</name>
-            <url>http://192.168.2.110:18081/repository/internal</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>Internal Snapshot Repository</name>
-            <url>http://192.168.2.110:18081/repository/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
-</project>  
-
-
-  <properties>
+<properties>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>  
    <scm>
@@ -123,3 +108,5 @@
   </dependencies>    
 </project>
 
+
+  
