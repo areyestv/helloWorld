@@ -17,7 +17,8 @@
    </scm>      
   <build>
     <finalName>DemoAlain</finalName>
-    <sourceDirectory>./Test-war/src</sourceDirectory>
+    <sourceDirectory>Test-war/src</sourceDirectory>
+    <sourceDirectory>Test-war/src/java</sourceDirectory>
     <plugins>
 	<plugin>            
 	  <groupId>org.apache.maven.plugins</groupId>
